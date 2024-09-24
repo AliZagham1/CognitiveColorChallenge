@@ -10,6 +10,7 @@ Play and Check Your Memory: https://alizagham1.github.io/CognitiveColorChallenge
 2. Watch the flashing buttons; this is the sequence you need to remember.
 3. Click the buttons in the same order as they appeared.
 4. If you click the wrong button, the game is over!
-5. Try to beat your high score!
+5. Wait for the message "Press Any Key to Restart" to appear before starting again.
+6. Try to beat your high score!
 
 Enjoy the game!
