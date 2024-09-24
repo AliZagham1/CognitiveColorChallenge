@@ -1,0 +1,85 @@
+body {
+  text-align: center;
+  background-color: #001f4d; /* Darker shade for contrast */
+  font-family: 'Press Start 2P', cursive;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#level-title {
+  font-size: 3.5rem;
+  color: #FEF2BF;
+  margin-bottom: 9rem;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+#high-score {
+  position: absoulte; 
+  right: 40px;  /* Position the element relative to the page */
+  top: 10px;            /* Distance from the top of the page */
+  right: 10px;          /* Distance from the right of the page */
+  font-size: 20px;      /* Adjust the size of the text */
+  color:   #FEF2BF;         /* Text color */
+  font-family: 'Press Start 2P', cursive;  /* Font style */
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create a grid layout for the buttons */
+  gap: 20px; /* Add spacing between buttons */
+  width: 400px;
+}
+
+.btn {
+  display: inline-block;
+  height: 150px;
+  width: 150px;
+  border: 8px solid black;
+  border-radius: 15%;
+  cursor: pointer;
+  transition: transform 0.1s ease; /* Add smooth transition for button click */
+}
+
+.btn:active {
+  transform: scale(0.95); /* Scale down slightly when pressed */
+}
+
+.game-over {
+  background-color: #ff4d4d; /* Bright red for more impact */
+  transition: background-color 0.3s ease; /* Smooth transition for game-over flash */
+}
+
+.red {
+  background-color: #ff4c4c;
+}
+
+.green {
+  background-color: #00e676;
+}
+
+.blue {
+  background-color: #2196f3;
+}
+
+.yellow {
+  background-color: #ffeb3b;
+}
+
+.pressed {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+  background-color: #b3b3b3;
+  transition: background-color 0.1s ease; /* Smoother transition for pressed effect */
+}
+
+footer {
+  text-align: center;
+  padding: 50px;
+  margin-top: 160PX;
+  color: #FEF2BF; /* Light color for contrast */
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
