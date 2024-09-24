@@ -3,3 +3,13 @@ CognitiveColorChallenge is an interactive memory game that enhances cognitive sk
 
 
 Play and Check Your Memory: https://alizagham1.github.io/CognitiveColorChallenge/
+
+## How to Play
+
+1. Press any key to start the game.
+2. Watch the flashing buttons; this is the sequence you need to remember.
+3. Click the buttons in the same order as they appeared.
+4. If you click the wrong button, the game is over!
+5. Try to beat your high score!
+
+Enjoy the game!
