@@ -3,11 +3,17 @@ var gamePattern = [];
 var userClickedPattern = [];
 var level = 0;
 var highScore = 0;
+var started = false;  // Check if the game has started
 
-// Start the game when a key is pressed
-$(document).keydown(function() {
-    if (level === 0) {
+// Show a simple start message
+$("h1").text("Tap or Press Any Key to Start");
+
+// Start the game when the screen is tapped or clicked (for mobile and desktop)
+$(document).on("keydown touchstart", function() {
+    if (!started) {
+        $("h1").text("Level " + level);
         nextSequence();
+        started = true;  // Prevent the game from restarting unnecessarily
     }
 });
 
@@ -71,17 +77,8 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 300);
 
-        $("h1").text("Game Over, SCORE: " + level);
-        if (level > highScore) {
-            highScore = level;  // Update the high score
-            $("h2").text("High Score: " + highScore);  // Display the high score
-        } else {
-            $("h2").text("High Score: " + highScore);  // Display the current high score
-        }
-        
-        setTimeout(function() {
-            $("h1").text("Press Any Key to Restart");
-        }, 2000);
+        $("h1").text("Game Over, Score: " + level + ". Tap or Press Any Key to Restart");
+
         // Call a function to restart the game
         startOver();
     }
@@ -90,4 +87,5 @@ function checkAnswer(currentLevel) {
 function startOver() {
     level = 0;  // Reset the level
     gamePattern = [];  // Clear the game pattern
+    started = false;  // Allow the game to be restarted
 }
