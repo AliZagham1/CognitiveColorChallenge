@@ -77,8 +77,17 @@ function checkAnswer(currentLevel) {
             $("body").removeClass("game-over");
         }, 300);
 
-        $("h1").text("Game Over, Score: " + level + ". Tap or Press Any Key to Restart");
-
+       $("h1").text("Game Over, SCORE: " + level);
+        if (level > highScore) {
+            highScore = level;  // Update the high score
+            $("h2").text("High Score: " + highScore);  // Display the high score
+        } else {
+            $("h2").text("High Score: " + highScore);  // Display the current high score
+        }
+        
+        setTimeout(function() {
+            $("h1").text("Tap the Screen or Press any key to Restart");
+        }, 2000);
         // Call a function to restart the game
         startOver();
     }
