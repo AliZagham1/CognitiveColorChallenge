@@ -5,8 +5,7 @@ var level = 0;
 var highScore = 0;
 var started = false;  // Check if the game has started
 
-// Show a simple start message
-$("h1").text("Tap or Press Any Key to Start");
+
 
 // Start the game when the screen is tapped or clicked (for mobile and desktop)
 $(document).on("keydown touchstart", function() {
